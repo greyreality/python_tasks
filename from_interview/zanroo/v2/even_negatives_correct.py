@@ -7,17 +7,26 @@
 # even_negatives('Nothing is not mine.', ['nothing', 'Not']) → True
 # even_negatives('notyouneverme', ['never', 'Not', 'no']) → True
 
+
 def even_negatives(source, negative_words):
-    count = 0
-    for i in range (0, len(negative_words)):
-        word = str(negative_words[i]).lower()
-        if source.lower().find(word) != -1:
-            count += 1
-    # print("final count",count)
-    if count % 2 == 0:
-        return True
-    else:
-        return False
+    res = {}
+    previous_words = []
+
+    for w in negative_words:
+        w = w.lower()
+
+        res[w] = source.lower().count(w)
+
+        for i in previous_words:
+            res[w] -= i.count(w)
+
+        previous_words.append(w)
+    print('final=',res.values())
+    return bool(sum([i for i in res.values()]) % 2 == 0)
+
+
 print(even_negatives('Never', ['never']))
 print(even_negatives('Nothing is not mine.', ['nothing', 'Not']))
 print(even_negatives('notyouneverme', ['never', 'Not', 'no'])) # shall be False, wrong answer in Example
+print(even_negatives('Not in it no my job no no', ['not', 'no']))
+print(even_negatives('Not not not', ['not']))

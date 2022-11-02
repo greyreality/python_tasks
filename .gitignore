@@ -1,0 +1,8 @@
+# OS metadata
+.DS_Store
+
+# Idea
+.idea
+
+# Results and reports
+*.log

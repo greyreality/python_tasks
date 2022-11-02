@@ -16,8 +16,8 @@ def find_same_head_tail(source):
         else:
             lefthalf = source[:mid]
             righthalf = source[mid+1:]
-    # print('lefthalf=',lefthalf)
-    # print('righthalf=',righthalf)
+    print('lefthalf=',lefthalf)
+    print('righthalf=',righthalf)
 
     head = ''
     result = None

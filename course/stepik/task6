@@ -1,0 +1,11 @@
+def rec(n, k):
+    if k == 0:
+        return 1
+    elif k > n:
+        return 0
+    else:
+        return rec(n - 1, k) + rec(n - 1, k - 1)
+n, k = map(int, input().split())
+print(rec(n, k))
+
+# recurcion
