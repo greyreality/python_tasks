@@ -1,4 +1,4 @@
-from maybe_on_interview.hexlet.linked_list import Node
+from Hexlet.linked_list import Node
 
 def test_is_circular1():
     last = Node(8)
