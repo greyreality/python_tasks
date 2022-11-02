@@ -22,6 +22,7 @@
 # "Save time"(2 words) and " x x" (2 words)
 # Focus on correctness not on performance
 
+# TODO: to check case with a string with two spaces
 def solution(s):
     size = len(list(s))
     words = 1
