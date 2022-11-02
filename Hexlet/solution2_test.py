@@ -1,4 +1,4 @@
-from maybe_on_interview.hexlet import solution2
+from Hexlet import solution2
 
 
 def test_find():
